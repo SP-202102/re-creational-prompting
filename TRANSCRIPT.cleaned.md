@@ -2024,9 +2024,9 @@ Put this at the very top of `GPT_INSTRUCTIONS.md`:
 ```markdown
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 
@@ -2085,9 +2085,9 @@ if ($content -notmatch $pattern) {
 $replacement = @"
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 "@
@@ -2160,9 +2160,9 @@ Absolutely. Below you’ll find:
 ```markdown
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 
@@ -2532,9 +2532,9 @@ function Inject-AutoVersionBlockIfMissing {
     $autoBlock = @"
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 
@@ -2628,9 +2628,9 @@ foreach (\$markdownFile in \$allMarkdownFiles) {
     \$replacement = @"
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 "@
@@ -2845,9 +2845,9 @@ function Inject-AutoVersionBlockIfMissing {
     $autoBlock = @"
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 
@@ -2953,9 +2953,9 @@ foreach (\$markdownFile in \$markdownFiles) {
     \$replacement = @"
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 "@
@@ -3220,9 +3220,9 @@ function Inject-AutoVersionBlockIfMissing {
     $autoBlock = @'
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 
@@ -3329,9 +3329,9 @@ foreach ($markdownFile in $markdownFiles) {
     $replacement = @"
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 "@
@@ -3829,9 +3829,9 @@ function Add-AutoVersionBlockIfMissing {
     $autoBlock = @'
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 
@@ -3986,9 +3986,9 @@ function Add-AutoVersionBlockIfMissing {
     $autoBlock = @'
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 
@@ -4094,9 +4094,9 @@ foreach ($markdownFile in $markdownFiles) {
     $replacement = @"
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 "@
@@ -4767,9 +4767,9 @@ New-DirectoryIfNotExists -Path $knowledgeDirectoryPath
 $coreContent = @'
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 
@@ -4830,9 +4830,9 @@ Deliverable B — CONTINUATION_PROMPT.md (single paste-ready prompt) including:
 $exportGuideContent = @'
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 
@@ -4939,9 +4939,9 @@ If export/share isn’t available, copy into TRANSCRIPT.md and use the same tran
 $helperScriptsContent = @'
 <!--
 AUTO_VERSION_BLOCK
-version: 792358a-dirty
-commit: 792358a
-updated_utc: 2026-01-09 16:04:52 UTC
+version: 0dcac8e-dirty
+commit: 0dcac8e
+updated_utc: 2026-01-09 16:41:30 UTC
 AUTO_VERSION_BLOCK
 -->
 
