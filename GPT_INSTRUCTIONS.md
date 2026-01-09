@@ -1,8 +1,8 @@
 <!--
 AUTO_VERSION_BLOCK
-version: {{GIT_DESCRIBE}}
-commit: {{GIT_SHA}}
-updated_utc: {{UPDATED_UTC}}
+version: 998b4c6-dirty
+commit: 998b4c6
+updated_utc: 2026-01-09 11:28:27 UTC
 AUTO_VERSION_BLOCK
 -->
 

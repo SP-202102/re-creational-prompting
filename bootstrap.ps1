@@ -6,7 +6,7 @@
   - Writes .githooks/pre-commit
   - Sets git config core.hooksPath = .githooks (repo-local)
   - Ensures .gitattributes forces LF for hooks
-  - Optionally injects AUTO_VERSION_BLOCK into all markdown files (idempotent)
+  - Optionally adds AUTO_VERSION_BLOCK to markdown files (idempotent)
   - Updates all AUTO_VERSION_BLOCK values immediately
 
 .REQUIREMENTS
@@ -18,7 +18,7 @@
 [CmdletBinding()]
 param(
     [Parameter(Mandatory = $false)]
-    [bool]$InjectAutoVersionBlockIntoAllMarkdownFiles = $true,
+    [bool]$AddAutoVersionBlockToAllMarkdownFiles = $true,
 
     [Parameter(Mandatory = $false)]
     [string[]]$MarkdownExcludeDirectoryNames = @(".git", "node_modules", ".venv", ".tmp", ".tmp_openai_export")
@@ -40,7 +40,7 @@ function Assert-CommandExists {
     }
 }
 
-function Ensure-DirectoryExists {
+function New-DirectoryIfNotExists {
     param([Parameter(Mandatory = $true)][string]$DirectoryPath)
 
     if (-not (Test-Path -LiteralPath $DirectoryPath)) {
@@ -56,7 +56,7 @@ function Write-Utf8NoBomFile {
 
     $parentDirectoryPath = Split-Path -Path $FilePath -Parent
     if ($parentDirectoryPath) {
-        Ensure-DirectoryExists -DirectoryPath $parentDirectoryPath
+        New-DirectoryIfNotExists -DirectoryPath $parentDirectoryPath
     }
 
     $utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($false)
@@ -88,7 +88,7 @@ function Get-AllMarkdownFiles {
         }
 }
 
-function Inject-AutoVersionBlockIfMissing {
+function Add-AutoVersionBlockIfMissing {
     param([Parameter(Mandatory = $true)][string]$MarkdownFilePath)
 
     $content = Get-Content -LiteralPath $MarkdownFilePath -Raw
@@ -123,8 +123,8 @@ Set-Location -Path $repositoryRoot
 $toolsDirectoryPath = Join-Path -Path $repositoryRoot -ChildPath "tools"
 $hooksDirectoryPath = Join-Path -Path $repositoryRoot -ChildPath ".githooks"
 
-Ensure-DirectoryExists -DirectoryPath $toolsDirectoryPath
-Ensure-DirectoryExists -DirectoryPath $hooksDirectoryPath
+New-DirectoryIfNotExists -DirectoryPath $toolsDirectoryPath
+New-DirectoryIfNotExists -DirectoryPath $hooksDirectoryPath
 
 # 1) Write tools/update-autoversion.ps1
 $updateAutoVersionScriptPath = Join-Path -Path $toolsDirectoryPath -ChildPath "update-autoversion.ps1"
@@ -191,7 +191,6 @@ Assert-CommandExists -CommandName "git"
 $repositoryRootPath = Get-RepositoryRoot
 Set-Location -Path $repositoryRootPath
 
-# Pre-commit cannot know the future commit hash; use current HEAD for a stable reference.
 $gitDescribe = (& git describe --tags --always --dirty 2>$null).Trim()
 if (-not $gitDescribe) { $gitDescribe = "unknown" }
 
@@ -226,17 +225,15 @@ AUTO_VERSION_BLOCK
 
 Write-Utf8NoBomFile -FilePath $updateAutoVersionScriptPath -Content $updateAutoVersionScriptContent
 
-# 2) Write .githooks/pre-commit (versioned hook)
+# 2) Write .githooks/pre-commit
 $preCommitHookPath = Join-Path -Path $hooksDirectoryPath -ChildPath "pre-commit"
-
-# Force LF by using `n explicitly
 $preCommitHookContent = "#!/usr/bin/env sh`nset -e`n`n# Update AUTO_VERSION_BLOCK in all markdown files that have it`npwsh -NoProfile -ExecutionPolicy Bypass -File tools/update-autoversion.ps1`n`n# Stage markdown changes only`ngit add -- `"*.md`"`n"
 Write-Utf8NoBomFile -FilePath $preCommitHookPath -Content $preCommitHookContent
 
-# 3) Configure git to use .githooks (repo-local)
+# 3) Configure hooks path
 & git config core.hooksPath ".githooks" | Out-Null
 
-# 4) Ensure .gitattributes enforces LF for hooks
+# 4) Ensure .gitattributes forces LF for hooks
 $gitAttributesPath = Join-Path -Path $repositoryRoot -ChildPath ".gitattributes"
 $requiredLines = @(
     "* text=auto",
@@ -259,29 +256,25 @@ if (-not (Test-Path -LiteralPath $gitAttributesPath)) {
     }
 }
 
-# 5) Optionally inject AUTO_VERSION_BLOCK into all markdown files
-if ($InjectAutoVersionBlockIntoAllMarkdownFiles) {
+# 5) Optionally add AUTO_VERSION_BLOCK to all markdown files
+if ($AddAutoVersionBlockToAllMarkdownFiles) {
     $markdownFiles = Get-AllMarkdownFiles -RootPath $repositoryRoot -ExcludeDirectoryNames $MarkdownExcludeDirectoryNames
     foreach ($markdownFile in $markdownFiles) {
-        [void](Inject-AutoVersionBlockIfMissing -MarkdownFilePath $markdownFile.FullName)
+        [void](Add-AutoVersionBlockIfMissing -MarkdownFilePath $markdownFile.FullName)
     }
 }
 
-# 6) Update all blocks immediately
+# 6) Update blocks now
 & pwsh -NoProfile -ExecutionPolicy Bypass -File $updateAutoVersionScriptPath -RepositoryRoot $repositoryRoot | Out-Null
 
 Write-Host ""
 Write-Host "Bootstrap complete." -ForegroundColor Green
-Write-Host "Repo root: $repositoryRoot"
 Write-Host "Configured: git config core.hooksPath .githooks"
 Write-Host "Created/updated: .githooks/pre-commit"
 Write-Host "Created/updated: tools/update-autoversion.ps1"
 Write-Host "Created/updated: .gitattributes"
 Write-Host ""
-Write-Host "Next steps:"
+Write-Host "Next:"
 Write-Host "  git status"
 Write-Host "  git add -A"
-Write-Host "  git commit -m `"Bootstrap hooks + autoversion`""
-Write-Host ""
-Write-Host "Cross-platform note:"
-Write-Host "  On macOS/Linux you may need: chmod +x .githooks/pre-commit"
+Write-Host "  git commit -m `"Bootstrap hooks + autoversion (approved verbs)`""
