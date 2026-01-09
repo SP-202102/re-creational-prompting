@@ -33,24 +33,6 @@ First question: in which format should i drop the existing AI conversation?
 What would be good instructions for a GPT to execute this task?
 ```
 
-[M2] Assistant (2026-01-09 08:16:30 UTC):
-
-```text
-{"search_query":[{"q":"How to create a GPT in ChatGPT (custom GPT) instructions knowledge actions","recency":30,"domains":["help.openai.com","openai.com"]},{"q":"ChatGPT GPTs format for instructions system prompt best practices","recency":365,"domains":["help.openai.com","openai.com"]}],"response_length":"short"}
-```
-
-[M3] Assistant (2026-01-09 08:16:43 UTC):
-
-```text
-{"open":[{"ref_id":"turn0search0"}],"response_length":"short"}
-```
-
-[M4] Assistant (2026-01-09 08:17:18 UTC):
-
-```text
-{"open":[{"ref_id":"turn0search1"}],"response_length":"short"}
-```
-
 [M5] Assistant (2026-01-09 08:17:22 UTC):
 
 ```text
@@ -220,12 +202,6 @@ OR
 - A JSON Export 
 
 from YOU, ChatGPT?
-```
-
-[M7] Assistant (2026-01-09 08:21:07 UTC):
-
-```text
-{"search_query":[{"q":"ChatGPT export data conversations.json how to export chat history","recency":30,"domains":["help.openai.com","openai.com"]},{"q":"ChatGPT share conversation copy link how to copy chat transcript","recency":30,"domains":["help.openai.com","openai.com"]},{"q":"ChatGPT download conversation as markdown","recency":365,"domains":["help.openai.com","openai.com"]}],"response_length":"short"}
 ```
 
 [M8] Assistant (2026-01-09 08:21:51 UTC):
@@ -1466,108 +1442,6 @@ Instructions like "how to export" or "how to create a link" or "a prompt that ca
 If the export needs additional work (like extracting ONE conversation or extracting attachements), please provide instructions and/or helper scripts.
 ```
 
-[M20] Assistant (2026-01-09 10:02:46 UTC):
-
-```text
-{"search_query":[{"q":"OpenAI ChatGPT export data conversations.json structure attachments files","recency":30,"domains":["help.openai.com","openai.com"]},{"q":"Anthropic Claude share conversation export transcript","recency":180},{"q":"Perplexity AI share conversation export pdf transcript","recency":180},{"q":"xAI Grok share conversation export transcript","recency":180}],"response_length":"short"}
-```
-
-[M21] Assistant (2026-01-09 10:03:22 UTC):
-
-```text
-{"search_query":[{"q":"Perplexity export conversation PDF share link help center","recency":365},{"q":"Perplexity share thread link 'export as pdf' documentation","recency":365},{"q":"xAI Grok share conversation link export feature documentation","recency":365},{"q":"Z.AI chat export conversation share link","recency":365}],"response_length":"short"}
-```
-
-[M22] Assistant (2026-01-09 10:03:33 UTC):
-
-```text
-{"search_query":[{"q":"Claude share conversation link feature support article","recency":365,"domains":["support.claude.com","www.anthropic.com"]},{"q":"Claude share conversation public link feature","recency":365},{"q":"Z.ai chat export conversation markdown pdf","recency":365},{"q":"Z.ai conversation history export","recency":365}],"response_length":"short"}
-```
-
-[M23] Assistant (2026-01-09 10:03:43 UTC):
-
-```text
-{"search_query":[{"q":"grok.com share conversation link how to","recency":365},{"q":"x.com grok share link conversation export download","recency":365,"domains":["help.x.com","x.ai","grok.com"]},{"q":"xAI Grok share chat link","recency":365},{"q":"Grok export chat history download","recency":365}],"response_length":"short"}
-```
-
-[M24] Assistant (2026-01-09 10:03:53 UTC):
-
-```text
-{"search_query":[{"q":"z.ai chat app export conversation","recency":365},{"q":"Z.AI chat web export pdf markdown","recency":365},{"q":"Z.ai conversation share link","recency":365},{"q":"Z.AI platform chat history download","recency":365}],"response_length":"short"}
-```
-
-[M25] Assistant (2026-01-09 10:04:11 UTC):
-
-```text
-{"open":[{"ref_id":"turn4search3"}],"response_length":"short"}
-```
-
-[M26] Assistant (2026-01-09 10:04:17 UTC):
-
-```text
-{"search_query":[{"q":"site:chat.z.ai export conversation","recency":365},{"q":"site:chat.z.ai share chat","recency":365},{"q":"site:z.ai help export chat","recency":365},{"q":"\"chat.z.ai\" \"share\" conversation","recency":365}],"response_length":"short"}
-```
-
-[M27] Assistant (2026-01-09 10:04:28 UTC):
-
-```text
-{"open":[{"ref_id":"turn6search10"}],"response_length":"short"}
-```
-
-[M28] Assistant (2026-01-09 10:04:34 UTC):
-
-```text
-{"search_query":[{"q":"site:chat.z.ai \"Export Data\"","recency":365},{"q":"site:chat.z.ai export data download","recency":365},{"q":"site:chat.z.ai legal agreement export data","recency":365},{"q":"\"chat.z.ai\" \"Export Data\" menu","recency":365}],"response_length":"short"}
-```
-
-[M29] Assistant (2026-01-09 10:04:42 UTC):
-
-```text
-{"search_query":[{"q":"\"Export Data\" \"chat.z.ai\" how to","recency":365},{"q":"site:chat.z.ai help \"Export Data\"","recency":365},{"q":"chat.z.ai export data privacy settings","recency":365},{"q":"chat.z.ai export data zip","recency":365}],"response_length":"short"}
-```
-
-[M30] Assistant (2026-01-09 10:04:49 UTC):
-
-```text
-{"open":[{"ref_id":"turn1search3"}],"response_length":"short"}
-```
-
-[M31] Assistant (2026-01-09 10:05:12 UTC):
-
-```text
-{"open":[{"ref_id":"turn0search4"}],"response_length":"short"}
-```
-
-[M32] Assistant (2026-01-09 10:05:43 UTC):
-
-```text
-{"open":[{"ref_id":"turn2search0"}],"response_length":"short"}
-```
-
-[M33] Assistant (2026-01-09 10:05:47 UTC):
-
-```text
-{"open":[{"ref_id":"turn1search2"},{"ref_id":"turn0search0"}],"response_length":"short"}
-```
-
-[M34] Assistant (2026-01-09 10:05:52 UTC):
-
-```text
-{"open":[{"ref_id":"turn1search0"}],"response_length":"short"}
-```
-
-[M35] Assistant (2026-01-09 10:05:57 UTC):
-
-```text
-{"search_query":[{"q":"site:chat.z.ai \"Export Data\" \">\"","recency":365},{"q":"site:chat.z.ai export-data","recency":365},{"q":"site:chat.z.ai \"export\" \"zip\"","recency":365},{"q":"chat.z.ai export data json","recency":365}],"response_length":"short"}
-```
-
-[M36] Assistant (2026-01-09 10:06:17 UTC):
-
-```text
-{"search_query":[{"q":"Claude data export zip format conversations json","recency":365},{"q":"Anthropic Claude export data file format JSON","recency":365},{"q":"Perplexity export thread markdown includes full thread or answer only","recency":365},{"q":"chat.z.ai export data format zip json","recency":365}],"response_length":"short"}
-```
-
 [M37] Assistant (2026-01-09 10:06:36 UTC):
 
 ```text
@@ -2266,18 +2140,6 @@ ok,
 1) give me the actual english version 
 2) use git hook (all autoversions should be updated) - is there really anything to do??
 3) give me a PS script that creates new folders and files (and attribute changes and so on) if needed
-```
-
-[M43] Assistant (2026-01-09 10:35:19 UTC):
-
-```text
-{"search_query":[{"q":"ChatGPT Export Data Settings Data Controls Export Data conversations.json chat.html","recency":14},{"q":"Claude share conversation link export data instructions","recency":30},{"q":"Perplexity export thread markdown pdf share link","recency":30},{"q":"Grok xAI share conversation link export chat","recency":30},{"q":"chat.z.ai export data share conversation","recency":365}],"response_length":"short"}
-```
-
-[M44] Assistant (2026-01-09 10:36:10 UTC):
-
-```text
-{"search_query":[{"q":"Claude share conversation link feature claude.ai share","recency":365},{"q":"Anthropic Claude share link conversation","recency":365}],"response_length":"short"}
 ```
 
 [M45] Assistant (2026-01-09 10:36:54 UTC):
@@ -3934,8 +3796,6 @@ New-DirectoryIfNotExists $somePath
  
 
 Reason: "New" is an approved PowerShell verb; "Ensure" is not.
-
-
 
 [{
 	"resource": "/d:/OneDrive/Develop/GitHub/re-creational-prompting/bootstrap.ps1",

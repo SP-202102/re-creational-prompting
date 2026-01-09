@@ -1,8 +1,8 @@
 <!--
 AUTO_VERSION_BLOCK
-version: b2fa8da-dirty
-commit: b2fa8da
-updated_utc: 2026-01-09 12:53:27 UTC
+version: 792358a-dirty
+commit: 792358a
+updated_utc: 2026-01-09 16:04:52 UTC
 AUTO_VERSION_BLOCK
 -->
 # re-creational prompting
