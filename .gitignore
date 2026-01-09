@@ -1,0 +1,16 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Python (if added later)
+__pycache__/
+*.pyc
+.venv/
+
+# Node (if added later)
+node_modules/
