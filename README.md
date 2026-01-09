@@ -1,8 +1,8 @@
 <!--
 AUTO_VERSION_BLOCK
-version: fde4356-dirty
-commit: fde4356
-updated_utc: 2026-01-09 11:32:54 UTC
+version: d5a4f82-dirty
+commit: d5a4f82
+updated_utc: 2026-01-09 11:47:07 UTC
 AUTO_VERSION_BLOCK
 -->
 # re-creational prompting
@@ -51,3 +51,12 @@ A single prompt that allows continuing the conversation seamlessly, including:
 ## Suggested next steps
 - Add an xamples/ folder with a real transcript + generated outputs.
 - Add a small parser script (PowerShell or Python) that converts JSON exports into the canonical Markdown transcript format.
+
+<!-- GPT_BUILDER_SETUP -->
+
+## GPT Builder setup (8,000 char limit)
+- Paste GPT_INSTRUCTIONS_CORE.md into the GPT **Instructions** field.
+- Upload the files in knowledge/ as GPT **Knowledge**:
+  - KNOWLEDGE_EXPORT_GUIDE.md
+  - KNOWLEDGE_HELPER_SCRIPTS.md
+- Add a conversation starter: Instructions, please!
