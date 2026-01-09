@@ -1,3 +1,10 @@
+<!--
+AUTO_VERSION_BLOCK
+version: a0f4fe1-dirty
+commit: a0f4fe1
+updated_utc: 2026-01-09 11:01:11 UTC
+AUTO_VERSION_BLOCK
+-->
 # re-creational prompting
 
 This repository documents a workflow for **re-creating the state of an existing AI conversation** (from ChatGPT, Claude, Perplexity, Grok, etc.) in a new chat or a new GPT—especially when the original thread is long and includes iterative drafts and uploaded documents.

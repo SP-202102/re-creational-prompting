@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+set -e
+
+# Update AUTO_VERSION_BLOCK in all markdown files that have it
+pwsh -NoProfile -ExecutionPolicy Bypass -File tools/update-autoversion.ps1
+
+# Stage markdown changes only
+git add -- "*.md"
