@@ -1,8 +1,8 @@
 <!--
 AUTO_VERSION_BLOCK
-version: 998b4c6-dirty
-commit: 998b4c6
-updated_utc: 2026-01-09 11:28:27 UTC
+version: fde4356-dirty
+commit: fde4356
+updated_utc: 2026-01-09 11:32:54 UTC
 AUTO_VERSION_BLOCK
 -->
 # re-creational prompting
